@@ -25,6 +25,7 @@ var base = new Airtable({ apiKey: 'keyjOTizIdrde7uri' }).base('appGXr7cIzp8rJTwX
 const table = base("À¯¹«³ä ¹ø¼ö");
 const getRecords = async () => {
     const records = table.select().firstPage();
-    console.log(records);
+    console.log('my big bull');
+    console.log('this is '+ records);
 }
 getRecords();
