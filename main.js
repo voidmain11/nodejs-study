@@ -17,25 +17,14 @@
 //});
 //console.log("실행 포트 번호는 : " + process.env.PORT);
 //app.listen(process.env.PORT || 3000);
+
+
+
 var Airtable = require('airtable');
-var base = new Airtable({ apiKey: 'keyjOTizIdrde7uri' }).base('appdiZAdaa8ucIPzt');
-
-base('Projects').select({
-    // Selecting the first 3 records in All projects:
-    maxRecords: 3,
-    view: "All projects"
-}).eachPage(function page(records, fetchNextPage) {
-    // This function (`page`) will get called for each page of records.
-
-    records.forEach(function (record) {
-        console.log('Retrieved', record.get('Project name'));
-    });
-
-    // To fetch the next page of records, call `fetchNextPage`.
-    // If there are more records, `page` will get called again.
-    // If there are no more records, `done` will get called.
-    fetchNextPage();
-
-}, function done(err) {
-    if (err) { console.error(err); return; }
-});
+var base = new Airtable({ apiKey: 'keyjOTizIdrde7uri' }).base('appGXr7cIzp8rJTwX');
+const table = base("유무념 번수");
+const getRecords = async () => {
+    const records = table.select().firstPage();
+    console.log(records);
+}
+getRecords();
