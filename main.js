@@ -20,11 +20,11 @@
 
 
 
-var Airtable = require('airtable');
-var base = new Airtable({ apiKey: 'keyjOTizIdrde7uri' }).base('appGXr7cIzp8rJTwX');
-const table = base("À¯¹«³ä ¹ø¼ö");
-const getRecords = async () => {
-    const records = table.select().firstPage();
-    console.log(records);
-}
-getRecords();
+//var Airtable = require('airtable');
+//var base = new Airtable({ apiKey: 'keyjOTizIdrde7uri' }).base('appGXr7cIzp8rJTwX');
+//const table = base("À¯¹«³ä ¹ø¼ö");
+//const getRecords = async () => {
+//    const records = table.select().firstPage();
+//    console.log(records);
+//}
+//getRecords();
