@@ -1,31 +1,32 @@
 // JavaScript source code
-var http = require('http');
+// console.log('hello world');
+ var http = require('http');
 var fs = require('fs');
 var app = http.createServer(function (request, response) {
-    var url = request.url;
-    if (request.url == '/') {
-        url = '/index.html';
-    }
-    if (request.url == '/favicon.ico') {
-        response.writeHead(404);
-        response.end();
-        return;
-    }
-    response.writeHead(200);
-    response.end(fs.readFileSync(__dirname + url));
+   var url = request.url;
+   if (request.url == '/') {
+       url = '/index.html';
+   }
+   if (request.url == '/favicon.ico') {
+       response.writeHead(404);
+       response.end();
+       return;
+   }
+   response.writeHead(200);
+   response.end(fs.readFileSync(__dirname + url));
 
 });
-console.log("½ÇÇà Æ÷Æ® ¹øÈ£´Â : " + process.env.PORT);
+console.log("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ® ï¿½ï¿½È£ï¿½ï¿½ : " + process.env.PORT);
 app.listen(process.env.PORT || 3000);
 
 
-
-var Airtable = require('airtable');
-var base = new Airtable({ apiKey: 'keyjOTizIdrde7uri' }).base('appGXr7cIzp8rJTwX');
-const table = base("À¯¹«³ä ¹ø¼ö");
-const getRecords = async () => {
-    const records = table.select().firstPage();
-    console.log('my big bull');
-    console.log('this is '+ records);
-}
-getRecords();
+//var Airtable = require('airtable');
+//win.focus();
+//var base = new Airtable({ apiKey: 'keyjOTizIdrde7uri' }).base('appGXr7cIzp8rJTwX');
+//const table = base("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+//const getRecords = async () => {
+//    const records = table.select().firstPage();
+//    console.log('my big bull');
+//    console.log('this is '+ records);
+//}
+//getRecords();
